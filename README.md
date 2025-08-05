@@ -1,5 +1,11 @@
 # Django Invoice Generator (Public Version) 🧾
 
+<p align="center">
+  <a href="https://nephycodes.gumroad.com/l/unqho">
+    <img src="https://img.shields.io/badge/Buy_Pro_Version-$29-F56565?style=for-the-badge&logo=github&logoColor=white" alt="Buy Pro Version">
+  </a>
+</p>
+
 A simple, beginner-friendly Django app that converts **CSV/Excel files into branded PDF invoices** — perfect for freelancers, small businesses, and developers learning web development.
 
 ✅ Upload a CSV → Preview → Download PDF  
@@ -105,6 +111,26 @@ The **Pro Version** includes:
 👉 **[Get the Pro Version on Gumroad](https://nephycodes.gumroad.com/l/unqho)**
 
 💡 Use it to learn DevOps, launch a SaaS, or sell as a template.
+
+## 🔍 Free vs Pro Version
+
+| Feature                   | Free (Public)        | Pro (Paid)                   |
+| ------------------------- | -------------------- | ---------------------------- |
+| ✅ Django Project Setup   | ✅ Yes               | ✅ Yes                       |
+| ✅ User Authentication    | ✅ Yes               | ✅ Yes                       |
+| ✅ CSV/Excel Upload       | ✅ Yes               | ✅ Yes                       |
+| ✅ PDF Invoice Generation | ✅ Yes (`xhtml2pdf`) | ✅ Yes (`weasyprint`)        |
+| ✅ Invoice History        | ✅ Yes               | ✅ Yes                       |
+| 🐳 Docker Support         | ❌ No                | ✅ Yes                       |
+| 🔄 CI/CD Pipeline         | ❌ No                | ✅ GitHub Actions            |
+| 🌐 PostgreSQL Support     | ❌ No                | ✅ Render, Supabase, Neon    |
+| 🔐 Monetization Hooks     | ❌ No                | ✅ `is_paid`, feature flags  |
+| 🎨 Company Logo in PDF    | ❌ No                | ✅ Yes                       |
+| 🧩 Dynamic Invoice Number | ❌ No                | ✅ Auto-increment            |
+| 📦 Full Tutorial Branches | ❌ No                | ✅ Step-by-step Git branches |
+| 💬 Priority Support       | ❌ No                | ✅ Yes                       |
+
+👉 **Get the Pro Version**: [https://nephycodes.gumroad.com/l/unqho](https://nephycodes.gumroad.com/l/unqho)
 
 ---
 
