@@ -1,40 +1,28 @@
-# Django Invoice Generator 🧾
+# Step 2: Setup User Authentication
 
-A Django-powered invoice generator with PDF export, user auth, and DevOps integration.
+This branch adds user authentication to the Django Invoice Generator.
 
-## 🚀 About the Project
+## ✅ What Was Done
 
-This is a step-by-step side project to build a web app that:
+- Created the `invoices` app
+- Set up login, register, and logout views
+- Protected the dashboard with `@login_required`
+- Added Bootstrap-based templates
 
-- Uploads CSV/Excel files
-- Generates branded PDF invoices
-- Allows download/email
-- Uses Docker, CI/CD, and cloud deployment
-- Has monetization potential
+## 🧪 How to Run
 
-## 🧩 Tutorial Series
+1. Activate virtual environment
+2. Run migrations:
 
-Each step of the project is tracked as a separate Git commit and GitHub branch.
+   ```bash
+   python manage.py migrate
+   ```
 
-### Steps Completed
-
-- [x] Step 1: Setup Django Project
-
-## 📦 Tech Stack
-
-- Django
-- HTML/CSS + Bootstrap
-- WeasyPrint (PDF generation)
-- Docker
-- GitHub Actions (CI/CD)
-- Render / Heroku (Cloud Hosting)
-
-## 🛠 Future Steps
-
-- Create Invoices App
-- Add User Authentication
-- Upload CSV/Excel
-- Generate PDF Invoices
-- Dockerize App
-- Deploy to Cloud
-- Add Monetization
+3. Run the server:
+   ```bash
+   python manage.py runserver
+   ```
+4. Visit:
+   http://127.0.0.1:8000/login/
+   http://127.0.0.1:8000/register/
+   http://127.0.0.1:8000/dashboard/
