@@ -1,41 +1,147 @@
-# Step 4: Generate PDF Invoices with Totals & Tax
+# Django Invoice Generator (Public Version) 🧾
 
-This commit adds PDF generation and invoice calculations to the Django Invoice Generator.
+A simple, beginner-friendly Django app that converts **CSV/Excel files into branded PDF invoices** — perfect for freelancers, small businesses, and developers learning web development.
 
-## ✅ What Was Done
+✅ Upload a CSV → Preview → Download PDF  
+✅ User login & invoice history  
+✅ Built with Django, Bootstrap, and xhtml2pdf  
+✅ No Docker or DevOps required
 
-- Created HTML invoice template
-- Used `xhtml2pdf` to generate PDFs (Windows friendly alternative to `weasyprint`)
-- Added **invoice totals calculation**:
-  - Subtotal = Quantity × Unit Price
-  - Tax Amount = (tax_rate / 100) \* Subtotal
-  - Total = Subtotal + Tax
-- Displayed **grand total** in preview and PDF
-- Styled invoice with CSS
-- Passed invoice data from session to template
+---
 
-> 💡 Note: We're using `xhtml2pdf` for now because `weasyprint` requires native libraries that aren't available on Windows. We'll switch back to `weasyprint` in Step 5 when we dockerize the app.
+## 🚀 Features
 
-## 🧪 How to Run
+- 🔐 User registration and login
+- 📥 Upload CSV or Excel files
+- 💬 Parse invoice data (description, quantity, price, tax)
+- 🧮 Auto-calculate subtotal, tax, and total
+- 🖨 Generate branded PDF invoices
+- 📁 Added Save invoice history Model
+- 🎨 Responsive UI with Bootstrap
 
-1. Activate virtual environment
-2. Run migrations:
-   ```bash
-   python manage.py migrate
-   ```
-3. Run the server:
+Perfect for:
 
-   ```bash
-   python manage.py runserver
-   ```
+- Django beginners
+- Python learners
+- Portfolio projects
+- Side hustles
 
-4. Visit:  
-   [http://127.0.0.1:8000/upload/](http://127.0.0.1:8000/upload/)
-   - Upload a CSV or Excel file
-   - Preview the parsed invoice data
-   - Click "Download PDF"
+---
 
-<!-- You can take the csv sample file in root folder named test_invoice.csv to test it-->
+## 🧪 How to Run Locally
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/django-invoice-generator-public.git
+cd django-invoice-generator-public
+```
+
+### 2. Set up virtual environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run migrations
+
+```bash
+python manage.py migrate
+```
+
+### 5. Create a superuser (optional)
+
+```bash
+python manage.py createsuperuser
+```
+
+### 6. Start the server
+
+```bash
+python manage.py runserver
+```
+
+### 7. Open your browser
+
+Go to:
+
+- 👉 http://127.0.0.1:8000
+
+### 📂 Sample CSV Format
+
+```
+description,quantity,unit_price,tax
+Web Design,1,500.00,0.10
+Hosting Fee,12,25.00,0.10
+Consulting,3,100.00,0.10
+```
+
+### Upload this file to generate a professional invoice with totals and tax.
+
+> You can use the csv sample file in root folder named test_invoice.csv to test it
+
+## 🧩 Want More Features?
+
+This is the **free, simplified version** of the app.
+
+The **Pro Version** includes:
+
+- 🐳 **Docker & Docker Compose** – Deploy anywhere
+- 🔄 **CI/CD with GitHub Actions** – Automated testing & builds
+- 🌐 **PostgreSQL support** – Production-ready database
+- 🔐 **Monetization hooks** – `is_paid`, feature flags, upgrade flow
+- 📦 **Invoice branding** – Company logo, dynamic fields
+- 🚀 **Deployment guides** – Render, Supabase, Heroku
+- 📚 **Tutorial branches** – Learn step-by-step
+
+👉 **[Get the Pro Version on Gumroad](https://nephycodes.gumroad.com/l/unqho)**
+
+💡 Use it to learn DevOps, launch a SaaS, or sell as a template.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** – see the `LICENSE` file for details.  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
+You are free to **use, modify, and distribute** this code.  
+**Note:** The Pro Version is sold under a **single user license** and is **not open source**.
+
+---
+
+## 🙌 Contributing
+
+Contributions are welcome!  
+Feel free to open issues or pull requests for:
+
+- UI improvements
+- New features (e.g., email invoices)
+- Bug fixes
+- Documentation
+
+---
+
+## 📣 Support the Project
+
+If you found this useful:
+
+- ⭐ Star this repo on GitHub
+- 🔄 Share it with someone learning Django
+- 💬 Tell me how you’re using it!
+
+---
+
+Made with 💡 by **[NephyCodes]**  
+Let’s connect: [LinkedIn](https://www.linkedin.com/in/demian-chidi-nwaoha-192384363/) | [YouTube](#)
 
 ## 📁 Project Structure
 
